@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Lato", sans-serif;
+}
+
 .container_01 {
   margin: 0 auto;
   width: 90%;
@@ -13,7 +17,6 @@
 .container_01 .wrap {
   width: 360px;
   margin: 0 auto;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -21,4 +24,13 @@
 }
 .container_01 .wrap .menu {
   padding: 107px 0 82px 0;
+}
+.container_01 .wrap .menu ul li {
+  margin-bottom: 60px;
+  list-style: none;
+  font-size: 50px;
+}
+.container_01 .wrap .menu ul li a {
+  color: #d2d2d2;
+  text-decoration: none;
 }
