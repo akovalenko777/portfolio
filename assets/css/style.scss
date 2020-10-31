@@ -26,9 +26,14 @@ body {
                 margin-bottom: 60px;
                 list-style: none;
                 font-size: 50px;
+                text-align: center;
                 a {
                     color: #d2d2d2;
                     text-decoration: none;
+                    font-weight: 300;
+                    &:hover {
+                        color: #3677fd;
+                    }
                 }
             }
         }
