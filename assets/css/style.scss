@@ -3,3 +3,105 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.sec_1 {
+    padding-top: 112px;
+    padding-bottom: 148px;
+    background: #3681fe url(../img/bg1.jpg) center no-repeat;
+    text-align: center;
+
+    .main-text {
+        text-transform: uppercase;
+        color: #fff;
+
+        button {
+            width: 204px;
+            height: 55px;
+            border-radius: 26px;
+            outline: 0 none;
+            border: 2px solid transparent;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #3695ff;
+            margin-top: 75px;
+            transition: all .3s ease;
+
+            &:hover {
+                color: #fff;
+                background-color: #6aafff;
+                border: 2px solid #fff;
+                transition: all .3s ease;
+            }
+
+            &:active {
+                background-color: #fff;
+                color: #3695ff;
+            }
+        }
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 50px;
+        padding-bottom: 42px;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 35px;
+    }
+}
+
+.circle {
+    width: 147px;
+    height: 147px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    z-index: 10;
+    top: -30px;
+    left: calc(50% - 77px);
+    margin-bottom: 53px;
+
+    &:after{
+        content:" ";
+        display: block;
+        width: calc(100% + 16px);
+        height: calc(100% + 16px);
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.12);
+        position: absolute;
+        left: -8px;
+        top: -8px;
+        border-radius: 50%;
+    }
+    &:before{
+        content:" ";
+        display: block;
+        width: calc(100% + 32px);
+        height: calc(100% + 32px);
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.06);
+        position: absolute;
+        left: -16px;
+        top: -16px;
+        border-radius: 50%;
+    }
+}
