@@ -3,3 +3,22 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.container_01 {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1170px;
+  background-color: #ffffff;
+}
+.container_01 .wrap {
+  width: 360px;
+  margin: 0 auto;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.container_01 .wrap .menu {
+  padding: 107px 0 82px 0;
+}
