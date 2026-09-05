@@ -28,6 +28,7 @@ function getHtmlEntries(dir, entries = {}) {
 }
 
 export default defineConfig({
+  base: '/portfolio/',
   plugins: [
     injectHTML(),
     // Add image auto-conversion and optimization pipeline
