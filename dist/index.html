@@ -15,8 +15,9 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Oleksandr Kovalenko - Portfolio" />
   <link rel="manifest" href="/favicon/site.webmanifest" />
-  <script type="module" crossorigin src="/assets/index-BkwMUlgD.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-Zv7qdX3B.css">
+
+  <script type="module" crossorigin src="/assets/index-Dw-9gJMC.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DdKXSWQL.css">
 </head>
 <body>
   <header class="site">
@@ -48,7 +49,10 @@
     </div>
 
     <div class="photo-frame">
-      <img src="/assets/images/ok_photo.jpg" alt="Олександр Коваленко">
+      <picture>
+        <source srcset="/assets/images/ok_photo.webp" type="image/webp">
+        <img src="/assets/images/ok_photo.jpg" alt="Олександр Коваленко">
+      </picture>
     </div>
   </div>
 </section>
@@ -221,175 +225,836 @@
 
     <div class="projects-grid">
       <div class="project-card panel">
-        <div class="project-overlay">
-          <a href="javascript:void(0)" class="detail-info-link">Дивитися детальну інформацію</a>
-          <a href="https://reukraine.shtab.net/" target="_blank" rel="noopener">Перейти на сайт ↗</a>
-        </div>
-        <span class="tick tl"></span><span class="tick br"></span>
-        <div class="project-img">
-          <img src="/assets/images/projects/reukraine/main-preview.png" alt="">
-        </div>
-        <div class="project-content">
-          <h3 class="project-org">Карта відновлення</h3>
-          <div class="project-link">
-            <a href="https://reukraine.shtab.net/" target="_blank" rel="noopener">reukraine.shtab.net</a>
-          </div>
-          <p>«Карта відновлення» — інтерактивна мапа зруйнованих і відбудованих об'єктів в Україні для моніторингу
-            коштів на відновлення.</p>
-          <div class="stack-tags">
-            <span>Vue</span><span>Nuxt</span><span>i18n</span><span>Leaflet</span><span>Аналітика</span>
-          </div>
-        </div>
-      </div>
+  <div class="project-overlay">
+    <a href="javascript:void(0)" class="detail-info-link" data-title="Карта відновлення" data-template="tmpl-reukraine">Дивитися детальну інформацію</a>
+    <a href="https://reukraine.shtab.net/" target="_blank" rel="noopener">Перейти на сайт ↗</a>
+  </div>
+  <span class="tick tl"></span><span class="tick br"></span>
+  <div class="project-img">
+    <img src="/assets/images/projects/reukraine/main-preview.png" alt="">
+  </div>
+  <div class="project-content">
+    <h3 class="project-org">Карта відновлення</h3>
+    <div class="project-link">
+      <a href="https://reukraine.shtab.net/" target="_blank" rel="noopener">reukraine.shtab.net</a>
+    </div>
+    <p>«Карта відновлення» — інтерактивна мапа зруйнованих і відбудованих об'єктів в Україні для моніторингу
+      коштів на відновлення.</p>
+    <div class="stack-tags">
+      <span>Vue</span><span>Nuxt</span><span>i18n</span><span>Leaflet</span><span>Аналітика</span>
+    </div>
+  </div>
+</div>
 
-
+<template id="tmpl-reukraine">
+  <div class="project-gallery-wrap">
+    <div class="project-gallery" id="project-gallery">
+      <a href="./src/assets/images/projects/reukraine/main.png" target="_blank" data-pswp-width="1600"
+        data-pswp-height="805">
+        <img src="/assets/images/projects/reukraine/main-thumb.png" alt="Перший екран">
+        <span>Перший екран</span>
+      </a>
+      <a href="./src/assets/images/projects/reukraine/about.png" target="_blank" data-pswp-width="1600"
+        data-pswp-height="2471">
+        <img src="/assets/images/projects/reukraine/about-thumb.png" alt="Про нас">
+        <span>Про нас</span>
+      </a>
+      <a href="./src/assets/images/projects/reukraine/object-detail.png" target="_blank" data-pswp-width="1600"
+        data-pswp-height="1198">
+        <img src="/assets/images/projects/reukraine/object-detail-thumb.png" alt="Об'єкт детально">
+        <span>Об'єкт детально</span>
+      </a>
+    </div>
+  </div>
+  <div class="modal-project-content">
+    <div class="address">
+      <a href="https://reukraine.shtab.net/" target="_blank" rel="noopener">reukraine.shtab.net</a>
+    </div>
+    <div class="description">
+      <p>«Карта відновлення» — інтерактивна мапа зруйнованих і відбудованих об'єктів в Україні для моніторингу коштів
+        на відновлення.</p>
+      <p>Застосунок виконаний за принципом SSR. В якості бандлера викорисовувався Vite. </p>
+      <p>Має окрему панель налаштувань доступності вівповідно до сучасних вимог за специфікаціями WCAG, EAA, a11y.</p>
+    </div>
+    <div class="tools">
+      <h4>Інструменти та технології</h4>
+      <ul>
+        <li>Nuxt.js</li>
+        <li>Vue 3 / Composition API</li>
+        <li>Pinia</li>
+        <li>i18n</li>
+        <li>HTML5 semantic / SCSS</li>
+        <li>TypeScript</li>
+        <li>Leaflet / MarkerCluster</li>
+        <li>LightGallery</li>
+        <li>Vue Router</li>
+        <li>Prozorro API integration</li>
+        <li>Middleware API</li>
+        <li>Налаштування доступності</li>
+      </ul>
+    </div>
+  </div>
+</template>
       <div class="project-card panel">
-        <span class="tick tl"></span><span class="tick br"></span>
-        <div class="project-img">
-          <img src="/assets/images/projects/rwc/main-preview.png" alt="">
-        </div>
-        <div class="project-content">
-          <h3 class="project-org">Реєстр воєнних злочинців</h3>
-          <div class="project-link">
-            <a href="https://rwc.shtab.net/" target="_blank" rel="noopener">rwc.shtab.net</a>
-          </div>
-          <p>«Реєстр воєнних злочинців» — публічна база з пошуком і фільтрацією осіб, причетних до воєнних злочинів
-            проти України.</p>
-          <div class="stack-tags">
-            <span>Vue</span><span>Nuxt</span><span>i18n</span><span>Leaflet</span><span>Аналітика</span>
-          </div>
-        </div>
-      </div>
+  <div class="project-overlay">
+    <a href="javascript:void(0)" class="detail-info-link" data-title="Дорожня карта відновлення регіонів" data-template="tmpl-rebuild">Дивитися детальну інформацію</a>
+    <a href="https://rebuild.shtab.net/" target="_blank" rel="noopener">Перейти на сайт ↗</a>
+  </div>
+  <span class="tick tl"></span><span class="tick br"></span>
+  <div class="project-img">
+    <img src="/assets/images/projects/rebuild/main-preview.png" alt="">
+  </div>
+  <div class="project-content">
+    <h3 class="project-org">Дорожня карта відновлення регіонів</h3>
+    <div class="project-link">
+      <a href="https://rebuild.shtab.net/" target="_blank" rel="noopener">rebuild.shtab.net</a>
+    </div>
+    <p>«Карта відновлення» — інтерактивна мапа зруйнованих і відбудованих об'єктів в Україні для моніторингу
+      коштів на відновлення.</p>
+    <div class="stack-tags">
+      <span>Vue</span><span>Nuxt</span><span>i18n</span><span>Leaflet</span><span>Аналітика</span>
+    </div>
+  </div>
+</div>
 
+<template id="tmpl-rebuild">
+  <div class="project-gallery-wrap">
+    <div class="project-gallery" id="project-gallery">
+      <a href="./src/assets/images/projects/rebuild/main.png" target="_blank" data-pswp-width="1600"
+        data-pswp-height="805">
+        <img src="/assets/images/projects/rebuild/main-thumb.png" alt="Перший екран">
+        <span>Перший екран</span>
+      </a>
+      <a href="./src/assets/images/projects/rebuild/main-full.png" target="_blank" data-pswp-width="1600"
+        data-pswp-height="4340">
+        <img src="/assets/images/projects/rebuild/main-full-thumb.png" alt="Сторінка">
+        <span>Сторінка</span>
+      </a>
+      <a href="./src/assets/images/projects/rebuild/modal.png" target="_blank" data-pswp-width="1600"
+        data-pswp-height="805">
+        <img src="/assets/images/projects/rebuild/modal-thumb.png" alt="Модалка">
+        <span>Модалка</span>
+      </a>
+    </div>
+  </div>
+  <div class="modal-project-content">
+    <div class="address">
+      <a href="https://rebuild.shtab.net/" target="_blank" rel="noopener">rebuild.shtab.net</a>
+    </div>
+    <div class="description">
+      <p>«Дорожня карта відновлення регіонів» — Проблеми та рішення відновлення на прикладі трьох областей: Житомирської, Запорізької та Харківської.</p>
+      <p>Статичний односторінковий сайт, з підтримкою англомовної версії.</p>
+      <p>Інтеграція інтерактивної карти для адреси та використання API Telegram для відправки повідомлень.</p>
+    </div>
+    <div class="tools">
+      <h4>Інструменти та технології</h4>
+      <ul>
+        <li>Gulp</li>
+        <li>HTML5 semantic / SCSS</li>
+        <li>JavaScript</li>
+        <li>Leaflet</li>
+        <li>Telegram API</li>
+        <li>SEO</li>
+        <li>LightSlider</li>
+        <li>LazyLoading</li>
+      </ul>
+    </div>
+  </div>
+</template>
       <div class="project-card panel">
-        <span class="tick tl"></span><span class="tick br"></span>
-        <div class="project-img">
-          <img src="/assets/images/projects/shtabnet/main-preview.png" alt="">
-        </div>
-        <div class="project-content">
-          <h3 class="project-org">ГО «Антикорупційний штаб»</h3>
-          <div class="project-link">
-            <a href="https://shtab.net/" target="_blank" rel="noopener">shtab.net</a>
-          </div>
-          <p>Сайт громадської організації з новинами, аналітикою, розділом команди — центральний хаб для профільних
-            civic-tech проєктів організації.</p>
-          <div class="stack-tags"><span>Custom CMS</span><span>Інформаційний сайт</span><span>Аналітика</span></div>
-        </div>
-      </div>
+  <div class="project-overlay">
+    <a href="javascript:void(0)" class="detail-info-link" data-title="Реєстр воєнних злочинців" data-template="tmpl-rwc">Дивитися детальну інформацію</a>
+    <a href="https://rwc.shtab.net/" target="_blank" rel="noopener">Перейти на сайт ↗</a>
+  </div>
+  <span class="tick tl"></span><span class="tick br"></span>
+  <div class="project-img">
+    <img src="/assets/images/projects/rwc/main-preview.png" alt="">
+  </div>
+  <div class="project-content">
+    <h3 class="project-org">Реєстр воєнних злочинців</h3>
+    <div class="project-link">
+      <a href="https://rwc.shtab.net/" target="_blank" rel="noopener">rwc.shtab.net</a>
+    </div>
+    <p>«Реєстр воєнних злочинців» — публічна база з пошуком і фільтрацією осіб, причетних до воєнних злочинів
+      проти України.</p>
+    <div class="stack-tags">
+      <span>Vue</span><span>Nuxt</span><span>i18n</span><span>Leaflet</span><span>Аналітика</span>
+    </div>
+  </div>
+</div>
 
+<template id="tmpl-rwc">
+  <div class="project-gallery-wrap">
+    <div class="project-gallery" id="project-gallery">
+      <a href="./src/assets/images/projects/rwc/main.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="805">
+        <img src="/assets/images/projects/rwc/main-thumb.png" alt="Перший екран">
+        <span>Перший екран</span>
+      </a>
+      <a href="./src/assets/images/projects/rwc/main-full.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="5043">
+        <img src="/assets/images/projects/rwc/main-full-thumb.png" alt="Головна">
+        <span>Головна</span>
+      </a>
+      <a href="./src/assets/images/projects/rwc/table.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="3969">
+        <img src="/assets/images/projects/rwc/table-thumb.png" alt="Реєстр">
+        <span>Реєстр</span>
+      </a>
+      <a href="./src/assets/images/projects/rwc/subpage.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="2028">
+        <img src="/assets/images/projects/rwc/subpage-thumb.png" alt="Розслідування">
+        <span>Розслідування</span>
+      </a>
+    </div>
+  </div>
+  <div class="modal-project-content">
+    <div class="address">
+      <a href="https://rwc.shtab.net/" target="_blank" rel="noopener">rwc.shtab.net</a>
+    </div>
+    <div class="description">
+      <p>«Реєстр воєнних злочинців» — публічна база з пошуком і фільтрацією осіб, причетних до воєнних злочинів
+      проти України.</p>
+      <p>Застосунок виконаний за принципом SSR. В якості бандлера викорисовувався Vite. </p>
+      <p>Має окрему панель налаштувань доступності вівповідно до сучасних вимог за специфікаціями WCAG, EAA, a11y.</p>
+    </div>
+    <div class="tools">
+      <h4>Інструменти та технології</h4>
+      <ul>
+        <li>Nuxt.js</li>
+        <li>Vue 3 / Composition API</li>
+        <li>Pinia</li>
+        <li>i18n</li>
+        <li>HTML5 semantic / SCSS</li>
+        <li>JavaScript ES6+</li>
+        <li>Leaflet / MarkerCluster</li>
+        <li>Vue Router</li>
+        <li>Middleware API</li>
+      </ul>
+    </div>
+  </div>
+</template>
       <div class="project-card panel">
-        <span class="tick tl"></span><span class="tick br"></span>
-        <div class="project-img">
-          <img src="/assets/images/projects/seorgua/main-preview.png" alt="">
-        </div>
-        <div class="project-content">
-          <h3 class="project-org">ГО «Соціальна єдність»</h3>
-          <div class="project-link">
-            <a href="https://se.org.ua/" target="_blank" rel="noopener">se.org.ua</a>
-          </div>
-          <p>Платформа громадської організації, що впроваджує цифрові рішення доступності для нечуючих людей в
-            Україні: карта доступності установ, каталог проєктів, форми звернень.</p>
-          <div class="stack-tags"><span>Custom CMS</span><span>Інформаційний сайт</span><span>SEO</span></div>
-        </div>
-      </div>
+  <div class="project-overlay">
+    <a href="javascript:void(0)" class="detail-info-link" data-title="ГО «Антикорупційний штаб»" data-template="tmpl-shtab">Дивитися детальну інформацію</a>
+    <a href="https://shtab.net/" target="_blank" rel="noopener">Перейти на сайт ↗</a>
+  </div>
+  <span class="tick tl"></span><span class="tick br"></span>
+  <div class="project-img">
+    <img src="/assets/images/projects/shtabnet/main-preview.png" alt="">
+  </div>
+  <div class="project-content">
+    <h3 class="project-org">ГО «Антикорупційний штаб»</h3>
+    <div class="project-link">
+      <a href="https://shtab.net/" target="_blank" rel="noopener">shtab.net</a>
+    </div>
+    <p>Сайт громадської організації з новинами, аналітикою, розділом команди — центральний хаб для профільних
+      civic-tech проєктів організації.</p>
+    <div class="stack-tags"><span>Custom CMS</span><span>Інформаційний сайт</span><span>Аналітика</span></div>
+  </div>
+</div>
 
+<template id="tmpl-shtab">
+  <div class="project-gallery-wrap">
+    <div class="project-gallery" id="project-gallery">
+      <a href="./src/assets/images/projects/shtabnet/main.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="805">
+        <img src="/assets/images/projects/shtabnet/main-thumb.png" alt="Перший екран">
+        <span>Перший екран</span>
+      </a>
+      <a href="./src/assets/images/projects/shtabnet/main-full.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="3133">
+        <img src="/assets/images/projects/shtabnet/main-full-thumb.png" alt="Головна">
+        <span>Головна</span>
+      </a>
+      <a href="./src/assets/images/projects/shtabnet/news.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="2587">
+        <img src="/assets/images/projects/shtabnet/news-thumb.png" alt="Новини">
+        <span>Новини</span>
+      </a>
+      <a href="./src/assets/images/projects/shtabnet/about.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="2063">
+        <img src="/assets/images/projects/shtabnet/about-thumb.png" alt="Про нас">
+        <span>Про нас</span>
+      </a>
+    </div>
+  </div>
+  <div class="modal-project-content">
+    <div class="address">
+      <a href="https://shtab.net/" target="_blank" rel="noopener">shtab.net</a>
+    </div>
+    <div class="description">
+      <p>Сайт громадської організації з новинами, аналітикою, розділом команди — центральний хаб для профільних
+      civic-tech проєктів організації.</p>
+      <p>Сайт реалізований на основі кастомної системи керування вмістом. </p>
+      <p>За рахунок кастомної логіки збірки й кешування статичних файлів, сайт має високу швидкість завантаження.</p>
+    </div>
+    <div class="tools">
+      <h4>Інструменти та технології</h4>
+      <ul>
+        <li>Custom CMS</li>
+        <li>PHP (OOP)</li>
+        <li>PDO</li>
+        <li>MySQL</li>
+        <li>jQuery</li>
+        <li>HTML5 semantic / SCSS</li>
+        <li>JavaScript ES6+</li>
+        <li>PixelPerfect</li>
+        <li>Responsive Web Design</li>
+        <li>Lazy Loading</li>
+      </ul>
+    </div>
+  </div>
+</template>
       <div class="project-card panel">
-        <span class="tick tl"></span><span class="tick br"></span>
-        <div class="project-img">
-          <img src="/assets/images/projects/tdl/main-preview.png" alt="">
-        </div>
-        <div class="project-content">
-          <h3 class="project-org">Технології для людей</h3>
-          <div class="project-link">
-            <a href="https://tdl.com.ua/" target="_blank" rel="noopener">tdl.com.ua</a>
-          </div>
-          <p>Продуктовий сайт SaaS-рішень для доступу до перекладачів жестової мови (Connect PRO, Connect Web,
-            мобільний застосунок) для держустанов та бізнесу.</p>
-          <div class="stack-tags"><span>Custom CMS</span><span>CSS
-              animations</span><span>SEO</span><span>Інформаційний сайт</span></div>
-        </div>
-      </div>
+  <div class="project-overlay">
+    <a href="javascript:void(0)" class="detail-info-link" data-title="ГО «Соціальна єдність»" data-template="tmpl-seorgua">Дивитися детальну інформацію</a>
+    <a href="https://se.org.ua/" target="_blank" rel="noopener">Перейти на сайт ↗</a>
+  </div>
+  <span class="tick tl"></span><span class="tick br"></span>
+  <div class="project-img">
+    <img src="/assets/images/projects/seorgua/main-preview.png" alt="">
+  </div>
+  <div class="project-content">
+    <h3 class="project-org">ГО «Соціальна єдність»</h3>
+    <div class="project-link">
+      <a href="https://se.org.ua/" target="_blank" rel="noopener">se.org.ua</a>
+    </div>
+    <p>Платформа громадської організації, що впроваджує цифрові рішення доступності для нечуючих людей в
+      Україні: карта доступності установ, каталог проєктів, форми звернень.</p>
+    <div class="stack-tags"><span>Custom CMS</span><span>Інформаційний сайт</span><span>SEO</span></div>
+  </div>
+</div>
 
+<template id="tmpl-seorgua">
+  <div class="project-gallery-wrap">
+    <div class="project-gallery" id="project-gallery">
+      <a href="./src/assets/images/projects/seorgua/main.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="805">
+        <img src="/assets/images/projects/seorgua/main-thumb.png" alt="Перший екран">
+        <span>Перший екран</span>
+      </a>
+      <a href="./src/assets/images/projects/seorgua/main-full.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="4288">
+        <img src="/assets/images/projects/seorgua/main-full-thumb.png" alt="Головна">
+        <span>Головна</span>
+      </a>
+      <a href="./src/assets/images/projects/seorgua/news.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="2437">
+        <img src="/assets/images/projects/seorgua/news-thumb.png" alt="Новини">
+        <span>Новини</span>
+      </a>
+      <a href="./src/assets/images/projects/seorgua/about.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="2803">
+        <img src="/assets/images/projects/seorgua/about-thumb.png" alt="Про нас">
+        <span>Про нас</span>
+      </a>
+    </div>
+  </div>
+  <div class="modal-project-content">
+    <div class="address">
+      <a href="https://se.org.ua/" target="_blank" rel="noopener">se.org.ua</a>
+    </div>
+    <div class="description">
+      <p>Платформа громадської організації, що впроваджує цифрові рішення доступності для нечуючих людей в
+      Україні: карта доступності установ, каталог проєктів, форми звернень.</p>
+      <p>Сайт реалізований на основі кастомної системи керування вмістом. </p>
+      <p>За рахунок кастомної логіки збірки й кешування статичних файлів, сайт має високу швидкість завантаження.</p>
+    </div>
+    <div class="tools">
+      <h4>Інструменти та технології</h4>
+      <ul>
+        <li>Custom CMS</li>
+        <li>PHP (OOP)</li>
+        <li>PDO</li>
+        <li>MySQL</li>
+        <li>jQuery / Plugins</li>
+        <li>HTML5 semantic / SCSS</li>
+        <li>JavaScript ES6+</li>
+        <li>PixelPerfect</li>
+        <li>Responsive Web Design</li>
+        <li>Lazy Loading</li>
+      </ul>
+    </div>
+  </div>
+</template>
       <div class="project-card panel">
-        <span class="tick tl"></span><span class="tick br"></span>
-        <div class="project-img">
-          <img src="/assets/images/projects/socbusiness/main-preview.png" alt="">
-        </div>
-        <div class="project-content">
-          <h3 class="project-org">Центр соціального бізнесу</h3>
-          <div class="project-link">
-            <a href="https://soc.business/" target="_blank" rel="noopener">soc.business</a>
-          </div>
-          <p>Маркетинговий сайт послуг перекладу жестовою мовою для медичних закладів, бізнесу та держустанов —
-            каталог рішень (QR-виклик, відеовіджет), форми заявок.</p>
-          <div class="stack-tags"><span>Custom CMS</span><span>Інформаційний сайт</span><span>SEO</span></div>
-        </div>
-      </div>
+  <div class="project-overlay">
+    <a href="javascript:void(0)" class="detail-info-link" data-title="Технології для людей" data-template="tmpl-tdl">Дивитися детальну інформацію</a>
+    <a href="https://tdl.com.ua/" target="_blank" rel="noopener">Перейти на сайт ↗</a>
+  </div>
+  <span class="tick tl"></span><span class="tick br"></span>
+  <div class="project-img">
+    <img src="/assets/images/projects/tdl/main-preview.png" alt="">
+  </div>
+  <div class="project-content">
+    <h3 class="project-org">Технології для людей</h3>
+    <div class="project-link">
+      <a href="https://tdl.com.ua/" target="_blank" rel="noopener">tdl.com.ua</a>
+    </div>
+    <p>Продуктовий сайт SaaS-рішень для доступу до перекладачів жестової мови (Connect PRO, Connect Web,
+      мобільний застосунок) для держустанов та бізнесу.</p>
+    <div class="stack-tags"><span>Custom CMS</span><span>CSS
+        animations</span><span>SEO</span><span>Інформаційний сайт</span></div>
+  </div>
+</div>
 
+<template id="tmpl-tdl">
+  <div class="project-gallery-wrap">
+    <div class="project-gallery" id="project-gallery">
+      <a href="./src/assets/images/projects/tdl/main.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="805">
+        <img src="/assets/images/projects/tdl/main-thumb.png" alt="Перший екран">
+        <span>Перший екран</span>
+      </a>
+      <a href="./src/assets/images/projects/tdl/main-full.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="4783">
+        <img src="/assets/images/projects/tdl/main-full-thumb.png" alt="Головна">
+        <span>Головна</span>
+      </a>
+      <a href="./src/assets/images/projects/tdl/product.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="2101">
+        <img src="/assets/images/projects/tdl/product-thumb.png" alt="Продукт">
+        <span>Продукт</span>
+      </a>
+      <a href="./src/assets/images/projects/tdl/about.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="2595">
+        <img src="/assets/images/projects/tdl/about-thumb.png" alt="Про нас">
+        <span>Про нас</span>
+      </a>
+    </div>
+  </div>
+  <div class="modal-project-content">
+    <div class="address">
+      <a href="https://tdl.com.ua/" target="_blank" rel="noopener">tdl.com.ua</a>
+    </div>
+    <div class="description">
+      <p>Продуктовий сайт SaaS-рішень для доступу до перекладачів жестової мови (Connect PRO, Connect Web,
+      мобільний застосунок) для держустанов та бізнесу.</p>
+      <p>Сайт реалізований на основі кастомної системи керування вмістом. Впроваджені інтерактивні та SVG анімації.</p>
+      <p>За рахунок кастомної логіки збірки й кешування статичних файлів, сайт має високу швидкість завантаження.</p>
+    </div>
+    <div class="tools">
+      <h4>Інструменти та технології</h4>
+      <ul>
+        <li>Custom CMS</li>
+        <li>PHP (OOP)</li>
+        <li>PDO</li>
+        <li>MySQL</li>
+        <li>jQuery / Plugins</li>
+        <li>HTML5 semantic / SCSS</li>
+        <li>JavaScript ES6+</li>
+        <li>PixelPerfect</li>
+        <li>Responsive Web Design</li>
+        <li>Lazy Loading</li>
+      </ul>
+    </div>
+  </div>
+</template>
       <div class="project-card panel">
-        <span class="tick tl"></span><span class="tick br"></span>
-        <div class="project-img">
-          <img src="/assets/images/projects/enfys/main-preview.png" alt="">
-        </div>
-        <div class="project-content">
-          <h3 class="project-org">Enfys Babyshop</h3>
-          <div class="project-link">
-            <a href="https://enfys.com.ua/" target="_blank" rel="noopener">enfys.com.ua</a>
-          </div>
-          <p>Інтернет-магазин дитячих товарів: каталог із фільтрами по категоріях і брендах, кошик, оплата
-            частинами, відеоогляди товарів.</p>
-          <div class="stack-tags"><span>Custom CMS</span><span>E-commerce</span><span>Payment API</span></div>
-        </div>
-      </div>
+  <div class="project-overlay">
+    <a href="javascript:void(0)" class="detail-info-link" data-title="Центр соціального бізнесу" data-template="tmpl-socbusiness">Дивитися детальну інформацію</a>
+    <a href="https://soc.business/" target="_blank" rel="noopener">Перейти на сайт ↗</a>
+  </div>
+  <span class="tick tl"></span><span class="tick br"></span>
+  <div class="project-img">
+    <img src="/assets/images/projects/socbusiness/main-preview.png" alt="">
+  </div>
+  <div class="project-content">
+    <h3 class="project-org">Центр соціального бізнесу</h3>
+    <div class="project-link">
+      <a href="https://soc.business/" target="_blank" rel="noopener">soc.business</a>
+    </div>
+    <p>Маркетинговий сайт послуг перекладу жестовою мовою для медичних закладів, бізнесу та держустанов —
+      каталог рішень (QR-виклик, відеовіджет), форми заявок.</p>
+    <div class="stack-tags"><span>Custom CMS</span><span>Інформаційний сайт</span><span>SEO</span></div>
+  </div>
+</div>
 
+<template id="tmpl-socbusiness">
+  <div class="project-gallery-wrap">
+    <div class="project-gallery" id="project-gallery">
+      <a href="./src/assets/images/projects/socbusiness/main.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="805">
+        <img src="/assets/images/projects/socbusiness/main-thumb.png" alt="Перший екран">
+        <span>Перший екран</span>
+      </a>
+      <a href="./src/assets/images/projects/socbusiness/main-full.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="4563">
+        <img src="/assets/images/projects/socbusiness/main-full-thumb.png" alt="Головна">
+        <span>Головна</span>
+      </a>
+      <a href="./src/assets/images/projects/socbusiness/services.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="2904">
+        <img src="/assets/images/projects/socbusiness/services-thumb.png" alt="Послуги">
+        <span>Послуги</span>
+      </a>
+      <a href="./src/assets/images/projects/socbusiness/about.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="2083">
+        <img src="/assets/images/projects/socbusiness/about-thumb.png" alt="Про нас">
+        <span>Про нас</span>
+      </a>
+    </div>
+  </div>
+  <div class="modal-project-content">
+    <div class="address">
+      <a href="https://soc.business/" target="_blank" rel="noopener">soc.business</a>
+    </div>
+    <div class="description">
+      <p>Маркетинговий сайт послуг перекладу жестовою мовою для медичних закладів, бізнесу та держустанов —
+      каталог рішень (QR-виклик, відеовіджет), форми заявок.</p>
+      <p>Сайт реалізований на основі кастомної системи керування вмістом.</p>
+      <p>За рахунок кастомної логіки збірки й кешування статичних файлів, сайт має високу швидкість завантаження.</p>
+    </div>
+    <div class="tools">
+      <h4>Інструменти та технології</h4>
+      <ul>
+        <li>Custom CMS</li>
+        <li>PHP (OOP)</li>
+        <li>PDO</li>
+        <li>MySQL</li>
+        <li>jQuery / Plugins</li>
+        <li>HTML5 semantic / SCSS</li>
+        <li>JavaScript ES6+</li>
+        <li>PixelPerfect</li>
+        <li>Responsive Web Design</li>
+        <li>Lazy Loading</li>
+      </ul>
+    </div>
+  </div>
+</template>
       <div class="project-card panel">
-        <span class="tick tl"></span><span class="tick br"></span>
-        <div class="project-img">
-          <img src="/assets/images/projects/paretto/main-preview.png" alt="">
-        </div>
-        <div class="project-content">
-          <h3 class="project-org">PARETTO</h3>
-          <div class="project-link">
-            <a href="https://paretto.com.ua/" target="_blank" rel="noopener">paretto.com.ua</a>
-          </div>
-          <p>Корпоративний сайт юридичної компанії: опис послуг (юридичні, кадрові, бухгалтерські), блог, форми
-            заявок, трьохмовний інтерфейс.</p>
-          <div class="stack-tags"><span>Custom CMS</span><span>Corporate site</span><span>Blog</span></div>
-        </div>
-      </div>
+  <div class="project-overlay">
+    <a href="javascript:void(0)" class="detail-info-link" data-title="Enfys Babyshop" data-template="tmpl-enfys">Дивитися детальну інформацію</a>
+    <a href="https://enfys.com.ua/" target="_blank" rel="noopener">Перейти на сайт ↗</a>
+  </div>
+  <span class="tick tl"></span><span class="tick br"></span>
+  <div class="project-img">
+    <img src="/assets/images/projects/enfys/main-preview.png" alt="">
+  </div>
+  <div class="project-content">
+    <h3 class="project-org">Enfys Babyshop</h3>
+    <div class="project-link">
+      <a href="https://enfys.com.ua/" target="_blank" rel="noopener">enfys.com.ua</a>
+    </div>
+    <p>Інтернет-магазин дитячих товарів: каталог із фільтрами по категоріях і брендах, кошик, оплата
+      частинами, відеоогляди товарів.</p>
+    <div class="stack-tags"><span>Custom CMS</span><span>E-commerce</span><span>Payment API</span></div>
+  </div>
+</div>
 
+<template id="tmpl-enfys">
+  <div class="project-gallery-wrap">
+    <div class="project-gallery" id="project-gallery">
+      <a href="./src/assets/images/projects/enfys/main.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="805">
+        <img src="/assets/images/projects/enfys/main-thumb.png" alt="Перший екран">
+        <span>Перший екран</span>
+      </a>
+      <a href="./src/assets/images/projects/enfys/main-full.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="4635">
+        <img src="/assets/images/projects/enfys/main-full-thumb.png" alt="Головна">
+        <span>Головна</span>
+      </a>
+      <a href="./src/assets/images/projects/enfys/category.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="2560">
+        <img src="/assets/images/projects/enfys/category-thumb.png" alt="Категорія">
+        <span>Категорія</span>
+      </a>
+      <a href="./src/assets/images/projects/enfys/product.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="4448">
+        <img src="/assets/images/projects/enfys/product-thumb.png" alt="Товар">
+        <span>Товар</span>
+      </a>
+      <a href="./src/assets/images/projects/enfys/order.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="1588">
+        <img src="/assets/images/projects/enfys/order-thumb.png" alt="Замовлення">
+        <span>Замовлення</span>
+      </a>
+    </div>
+  </div>
+  <div class="modal-project-content">
+    <div class="address">
+      <a href="https://enfys.com.ua/" target="_blank" rel="noopener">enfys.com.ua</a>
+    </div>
+    <div class="description">
+      <p>Інтернет-магазин дитячих товарів: каталог із фільтрами по категоріях і брендах, кошик, оплата
+      частинами, відеоогляди товарів.</p>
+      <p>Сайт реалізований на основі кастомної системи керування вмістом. Впроваджені інтерактивні та SVG анімації.</p>
+      <p>Інтеграція з зовнішніми API сервісами: WayForPay, LiqPay, Приват Банк, Нова пошта.</p>
+      <p>За рахунок кастомної логіки збірки й кешування статичних файлів, сайт має високу швидкість завантаження.</p>
+    </div>
+    <div class="tools">
+      <h4>Інструменти та технології</h4>
+      <ul>
+        <li>Custom CMS</li>
+        <li>PHP (OOP)</li>
+        <li>PDO</li>
+        <li>MySQL</li>
+        <li>jQuery / Plugins</li>
+        <li>HTML5 semantic / SCSS</li>
+        <li>JavaScript ES6+</li>
+        <li>API Integration</li>
+        <li>PixelPerfect</li>
+        <li>Responsive Web Design</li>
+        <li>Lazy Loading</li>
+      </ul>
+    </div>
+  </div>
+</template>
       <div class="project-card panel">
-        <span class="tick tl"></span><span class="tick br"></span>
-        <div class="project-img">
-          <img src="/assets/images/projects/egmont/main-preview.png" alt="">
-        </div>
-        <div class="project-content">
-          <h3 class="project-org">Egmont Aviation</h3>
-          <div class="project-link">
-            <a href="https://egmontaviation.com/" target="_blank" rel="noopener">egmontaviation.com</a>
-          </div>
-          <p>Провідна компанія з продажу авіаційної техніки, підготовки пілотів та виробництві літаків.</p>
-          <div class="stack-tags"><span>Custom CMS</span><span>Каталог</span><span>Blog</span></div>
-        </div>
-      </div>
+  <div class="project-overlay">
+    <a href="javascript:void(0)" class="detail-info-link" data-title="PARETTO" data-template="tmpl-paretto">Дивитися детальну інформацію</a>
+    <a href="https://paretto.com.ua/" target="_blank" rel="noopener">Перейти на сайт ↗</a>
+  </div>
+  <span class="tick tl"></span><span class="tick br"></span>
+  <div class="project-img">
+    <img src="/assets/images/projects/paretto/main-preview.png" alt="">
+  </div>
+  <div class="project-content">
+    <h3 class="project-org">PARETTO</h3>
+    <div class="project-link">
+      <a href="https://paretto.com.ua/" target="_blank" rel="noopener">paretto.com.ua</a>
+    </div>
+    <p>Корпоративний сайт юридичної компанії: опис послуг (юридичні, кадрові, бухгалтерські), блог, форми
+      заявок, трьохмовний інтерфейс.</p>
+    <div class="stack-tags"><span>Custom CMS</span><span>Corporate site</span><span>Blog</span></div>
+  </div>
+</div>
 
+<template id="tmpl-paretto">
+  <div class="project-gallery-wrap">
+    <div class="project-gallery" id="project-gallery">
+      <a href="./src/assets/images/projects/paretto/main.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="805">
+        <img src="/assets/images/projects/paretto/main-thumb.png" alt="Перший екран">
+        <span>Перший екран</span>
+      </a>
+      <a href="./src/assets/images/projects/paretto/main-full.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="3843">
+        <img src="/assets/images/projects/paretto/main-full-thumb.png" alt="Головна">
+        <span>Головна</span>
+      </a>
+      <a href="./src/assets/images/projects/paretto/blog.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="1507">
+        <img src="/assets/images/projects/paretto/blog-thumb.png" alt="Блог">
+        <span>Блог</span>
+      </a>
+      <a href="./src/assets/images/projects/paretto/about.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="1823">
+        <img src="/assets/images/projects/paretto/about-thumb.png" alt="Про компанію">
+        <span>Про компанію</span>
+      </a>
+      <a href="./src/assets/images/projects/paretto/service.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="2251">
+        <img src="/assets/images/projects/paretto/service-thumb.png" alt="Послуга">
+        <span>Послуга</span>
+      </a>
+    </div>
+  </div>
+  <div class="modal-project-content">
+    <div class="address">
+      <a href="https://paretto.com.ua/" target="_blank" rel="noopener">paretto.com.ua</a>
+    </div>
+    <div class="description">
+      <p>Корпоративний сайт юридичної компанії: опис послуг (юридичні, кадрові, бухгалтерські), блог, форми
+      заявок, трьохмовний інтерфейс.</p>
+      <p>Сайт реалізований на основі кастомної системи керування вмістом. Впроваджені інтерактивні та SVG анімації.</p>
+      <p>За рахунок кастомної логіки збірки й кешування статичних файлів, сайт має високу швидкість завантаження.</p>
+    </div>
+    <div class="tools">
+      <h4>Інструменти та технології</h4>
+      <ul>
+        <li>Custom CMS</li>
+        <li>PHP (OOP)</li>
+        <li>PDO</li>
+        <li>MySQL</li>
+        <li>jQuery / Plugins</li>
+        <li>HTML5 semantic / SCSS</li>
+        <li>JavaScript ES6+</li>
+        <li>PixelPerfect</li>
+        <li>Responsive Web Design</li>
+        <li>Lazy Loading</li>
+      </ul>
+    </div>
+  </div>
+</template>
       <div class="project-card panel">
-        <span class="tick tl"></span><span class="tick br"></span>
-        <div class="project-img">
-          <img src="/assets/images/projects/amsaan/main-preview.png" alt="">
-        </div>
-        <div class="project-content">
-          <h3 class="project-org">Amsaan, ОАЕ</h3>
-          <div class="project-link">
-            <a href="https://amsaan.com/" target="_blank" rel="noopener">amsaan.com</a>
-          </div>
-          <p>Міжнародна платформа інклюзивних технологій для спілкування з нечуючими людьми: продукти, партнери,
-            медіа-розділ, багатомовний інтерфейс (en/ar).</p>
-          <div class="stack-tags"><span>Custom CMS</span><span>Інформаційний сайт</span><span>Багатомовний</span>
-          </div>
-        </div>
-      </div>
+  <div class="project-overlay">
+    <a href="javascript:void(0)" class="detail-info-link" data-title="Egmont Aviation" data-template="tmpl-egmont">Дивитися детальну інформацію</a>
+    <a href="https://egmontaviation.com/" target="_blank" rel="noopener">Перейти на сайт ↗</a>
+  </div>
+  <span class="tick tl"></span><span class="tick br"></span>
+  <div class="project-img">
+    <img src="/assets/images/projects/egmont/main-preview.png" alt="">
+  </div>
+  <div class="project-content">
+    <h3 class="project-org">Egmont Aviation</h3>
+    <div class="project-link">
+      <a href="https://egmontaviation.com/" target="_blank" rel="noopener">egmontaviation.com</a>
+    </div>
+    <p>Провідна компанія з продажу авіаційної техніки, підготовки пілотів та виробництві літаків.</p>
+    <div class="stack-tags"><span>Custom CMS</span><span>Каталог</span><span>Blog</span></div>
+  </div>
+</div>
 
+<template id="tmpl-egmont">
+  <div class="project-gallery-wrap">
+    <div class="project-gallery" id="project-gallery">
+      <a href="./src/assets/images/projects/egmont/main.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="805">
+        <img src="/assets/images/projects/egmont/main-thumb.png" alt="Головна">
+        <span>Головна</span>
+      </a>
+      <a href="./src/assets/images/projects/egmont/category.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="2888">
+        <img src="/assets/images/projects/egmont/category-thumb.png" alt="Категорія">
+        <span>Категорія</span>
+      </a>
+      <a href="./src/assets/images/projects/egmont/detail.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="3601">
+        <img src="/assets/images/projects/egmont/detail-thumb.png" alt="Продукт">
+        <span>Продукт</span>
+      </a>
+    </div>
+  </div>
+  <div class="modal-project-content">
+    <div class="address">
+      <a href="https://egmontaviation.com/" target="_blank" rel="noopener">egmontaviation.com</a>
+    </div>
+    <div class="description">
+      <p>Провідна компанія з продажу авіаційної техніки, підготовки пілотів та виробництві літаків.</p>
+      <p>Сайт реалізований на основі кастомної системи керування вмістом.</p>
+      <p>За рахунок кастомної логіки збірки й кешування статичних файлів, сайт має високу швидкість завантаження.</p>
+    </div>
+    <div class="tools">
+      <h4>Інструменти та технології</h4>
+      <ul>
+        <li>Custom CMS</li>
+        <li>PHP (OOP)</li>
+        <li>PDO</li>
+        <li>MySQL</li>
+        <li>jQuery / Plugins</li>
+        <li>HTML5 semantic / SCSS</li>
+        <li>JavaScript ES6+</li>
+        <li>PixelPerfect</li>
+        <li>Responsive Web Design</li>
+        <li>Lazy Loading</li>
+      </ul>
+    </div>
+  </div>
+</template>
+      <div class="project-card panel">
+  <div class="project-overlay">
+    <a href="javascript:void(0)" class="detail-info-link" data-title="Amsaan, ОАЕ" data-template="tmpl-amsaan">Дивитися детальну інформацію</a>
+    <a href="https://amsaan.com/" target="_blank" rel="noopener">Перейти на сайт ↗</a>
+  </div>
+  <span class="tick tl"></span><span class="tick br"></span>
+  <div class="project-img">
+    <img src="/assets/images/projects/amsaan/main-preview.png" alt="">
+  </div>
+  <div class="project-content">
+    <h3 class="project-org">Amsaan, ОАЕ</h3>
+    <div class="project-link">
+      <a href="https://amsaan.com/" target="_blank" rel="noopener">amsaan.com</a>
+    </div>
+    <p>Міжнародна платформа інклюзивних технологій для спілкування з нечуючими людьми: продукти, партнери,
+      медіа-розділ, багатомовний інтерфейс (en/ar).</p>
+    <div class="stack-tags"><span>Custom CMS</span><span>Інформаційний сайт</span><span>Багатомовний</span>
+    </div>
+  </div>
+</div>
+
+<template id="tmpl-amsaan">
+  <div class="project-gallery-wrap">
+    <div class="project-gallery" id="project-gallery">
+      <a href="./src/assets/images/projects/amsaan/main.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="805">
+        <img src="/assets/images/projects/amsaan/main-thumb.png" alt="Головна">
+        <span>Головна</span>
+      </a>
+      <a href="./src/assets/images/projects/amsaan/products.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="2553">
+        <img src="/assets/images/projects/amsaan/products-thumb.png" alt="Категорія">
+        <span>Категорія</span>
+      </a>
+      <a href="./src/assets/images/projects/amsaan/product.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="2200">
+        <img src="/assets/images/projects/amsaan/product-thumb.png" alt="Категорія">
+        <span>Категорія</span>
+      </a>
+      <a href="./src/assets/images/projects/amsaan/team.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="1503">
+        <img src="/assets/images/projects/amsaan/team-thumb.png" alt="Продукт">
+        <span>Продукт</span>
+      </a>
+    </div>
+  </div>
+  <div class="modal-project-content">
+    <div class="address">
+      <a href="https://amsaan.com/" target="_blank" rel="noopener">amsaan.com</a>
+    </div>
+    <div class="description">
+      <p>Міжнародна платформа інклюзивних технологій для спілкування з нечуючими людьми: продукти, партнери,
+      медіа-розділ, багатомовний інтерфейс (en/ar).</p>
+      <p>Сайт реалізований на основі кастомної системи керування вмістом.</p>
+      <p>За рахунок кастомної логіки збірки й кешування статичних файлів, сайт має високу швидкість завантаження.</p>
+    </div>
+    <div class="tools">
+      <h4>Інструменти та технології</h4>
+      <ul>
+        <li>Custom CMS</li>
+        <li>PHP (OOP)</li>
+        <li>PDO</li>
+        <li>MySQL</li>
+        <li>jQuery / Plugins</li>
+        <li>HTML5 semantic / SCSS</li>
+        <li>LTR / RTL</li>
+        <li>JavaScript ES6+</li>
+        <li>PixelPerfect</li>
+        <li>Responsive Web Design</li>
+        <li>Lazy Loading</li>
+      </ul>
+    </div>
+  </div>
+</template>
     </div>
   </div>
 </section>
@@ -450,51 +1115,12 @@
 </footer>
 
   <div id="dialog-backdrop"></div>
-<div id="project-dialog" class="modal open" aria-modal="false">
+<div id="project-dialog" class="modal" aria-modal="false">
   <div class="modal-header">
-    <h3>Детальна інформація про проєкт: <span>Карта відновлення</span></h3>
+    <h3>Детальна інформація про проєкт: <span id="dialog-project-title"></span></h3>
     <button id="close-dialog">Закрити</button>
   </div>
-  <div class="modal-body">
-    <div class="project-gallery">
-      <ul class="gallery-list">
-        <li>
-          <figure>
-            <img src="/assets/images/projects/reukraine/main-preview.png" alt="Перший екран">
-            <figcaption>Перший екран</figcaption>
-          </figure>
-        </li>
-      </ul>
-    </div>
-    <div class="modal-project-content">
-      <div class="address">
-        <a href="https://reukraine.shtab.net/" target="_blank" rel="noopener">reukraine.shtab.net</a>
-      </div>
-      <div class="description">
-        <p>«Карта відновлення» — інтерактивна мапа зруйнованих і відбудованих об'єктів в Україні для моніторингу коштів
-          на відновлення.</p>
-        <p>Застосунок виконаний за принципом SSR. В якості бандлера викорисовувався Vite. </p>
-        <p>Має окрему панель налаштувань доступності вівповідно до сучасних вимог за специфікаціями WCAG, EAA, a11y.</p>
-      </div>
-      <div class="tools">
-        <h4>Інструменти та технології</h4>
-        <ul>
-          <li>Nuxt.js</li>
-          <li>Vue 3 / Composition API</li>
-          <li>Pinia</li>
-          <li>i18n</li>
-          <li>HTML5 semantic / SCSS</li>
-          <li>TypeScript</li>
-          <li>Leaflet / MarkerCluster</li>
-          <li>LightGallery</li>
-          <li>Vue Router</li>
-          <li>Prozorro API integration</li>
-          <li>Middleware API</li>
-          <li>Налаштування доступності</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <div class="modal-body" id="project-modal-content"></div>
 </div>
 
 </body>
