@@ -1,0 +1,19 @@
+{
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/convert-fonts.js && node scripts/process-images.js",
+    "prebuild": "node scripts/convert-fonts.js && node scripts/process-images.js",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "fs-extra": "^11.3.5",
+    "sass": "^1.100.0",
+    "sharp": "^0.35.4",
+    "vite": "^8.0.16",
+    "vite-plugin-html-inject": "^1.1.2",
+    "vite-plugin-image-optimizer": "^2.0.3",
+    "wawoff2": "^2.0.1"
+  }
+}

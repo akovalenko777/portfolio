@@ -1,0 +1,77 @@
+<div class="project-card panel">
+  <div class="project-overlay">
+    <a href="javascript:void(0)" class="detail-info-link" data-title="Реєстр воєнних злочинців" data-template="tmpl-rwc">Дивитися детальну інформацію</a>
+    <a href="https://rwc.shtab.net/" target="_blank" rel="noopener">Перейти на сайт ↗</a>
+  </div>
+  <span class="tick tl"></span><span class="tick br"></span>
+  <div class="project-img">
+    <img src="./src/assets/images/projects/rwc/main-preview.png" alt="">
+  </div>
+  <div class="project-content">
+    <h3 class="project-org">Реєстр воєнних злочинців</h3>
+    <div class="project-link">
+      <a href="https://rwc.shtab.net/" target="_blank" rel="noopener">rwc.shtab.net</a>
+    </div>
+    <p>«Реєстр воєнних злочинців» — публічна база з пошуком і фільтрацією осіб, причетних до воєнних злочинів
+      проти України.</p>
+    <div class="stack-tags">
+      <span>Vue</span><span>Nuxt</span><span>i18n</span><span>Leaflet</span><span>Аналітика</span>
+    </div>
+  </div>
+</div>
+
+<template id="tmpl-rwc">
+  <div class="project-gallery-wrap">
+    <div class="project-gallery" id="project-gallery">
+      <a href="./src/assets/images/projects/rwc/main.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="805">
+        <img src="./src/assets/images/projects/rwc/main-thumb.png" alt="Перший екран">
+        <span>Перший екран</span>
+      </a>
+      <a href="./src/assets/images/projects/rwc/main-full.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="5043">
+        <img src="./src/assets/images/projects/rwc/main-full-thumb.png" alt="Головна">
+        <span>Головна</span>
+      </a>
+      <a href="./src/assets/images/projects/rwc/table.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="3969">
+        <img src="./src/assets/images/projects/rwc/table-thumb.png" alt="Реєстр">
+        <span>Реєстр</span>
+      </a>
+      <a href="./src/assets/images/projects/rwc/subpage.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="2028">
+        <img src="./src/assets/images/projects/rwc/subpage-thumb.png" alt="Розслідування">
+        <span>Розслідування</span>
+      </a>
+    </div>
+  </div>
+  <div class="modal-project-content">
+    <div class="address">
+      <a href="https://rwc.shtab.net/" target="_blank" rel="noopener">rwc.shtab.net</a>
+    </div>
+    <div class="description">
+      <p>«Реєстр воєнних злочинців» — публічна база з пошуком і фільтрацією осіб, причетних до воєнних злочинів
+      проти України.</p>
+      <p>Застосунок виконаний за принципом SSR. В якості бандлера викорисовувався Vite. </p>
+      <p>Має окрему панель налаштувань доступності вівповідно до сучасних вимог за специфікаціями WCAG, EAA, a11y.</p>
+    </div>
+    <div class="tools">
+      <h4>Інструменти та технології</h4>
+      <ul>
+        <li>Nuxt.js</li>
+        <li>Vue 3 / Composition API</li>
+        <li>Pinia</li>
+        <li>i18n</li>
+        <li>HTML5 semantic / SCSS</li>
+        <li>JavaScript ES6+</li>
+        <li>Leaflet / MarkerCluster</li>
+        <li>Vue Router</li>
+        <li>Middleware API</li>
+      </ul>
+    </div>
+  </div>
+</template>
