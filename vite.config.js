@@ -31,37 +31,42 @@ export default defineConfig({
   base: '/portfolio/',
   plugins: [
     injectHTML(),
-    // Add image auto-conversion and optimization pipeline
     ViteImageOptimizer({
-      // 1. Process standard source image types
       test: /\.(jpe?g|png|webp)$/i,
-
-      // 2. Set default compression formats for existing files
       jpeg: { quality: 80 },
       png: { quality: 80 },
-
-      // 3. Configure the engine to force auto-conversion characteristics if desired
       webp: {
         lossless: false,
         quality: 80,
       },
     }),
+    {
+      name: 'replace-html-image-links',
+      transformIndexHtml: {
+        order: 'post',
+        handler(html) {
+          return html.replace(
+            /<a href=".\/src\//g, 
+              '<a href="/portfolio/'
+          );
+        }
+      }
+    }
   ],
 
   build: {
     rollupOptions: {
       input: getHtmlEntries(process.cwd()),
       output: {
-      assetFileNames: (assetInfo) => {
-        const info = assetInfo.name.split('.');
-        const extType = info[info.length - 1];
-        if (/\.(png|jpe?g|svg|gif|tiff|bmp|webp|avif)$/i.test(assetInfo.name)) {
-          return assetInfo.originalFileName.replace('src/', '')
-          // return `assets/images/[name].[ext]`;
-        }
-        return `assets/[name]-[hash].[ext]`;
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const extType = info[info.length - 1];
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|webp|avif)$/i.test(assetInfo.name)) {
+            return assetInfo.originalFileName.replace('src/', '')
+          }
+          return `assets/[name]-[hash].[ext]`;
+        },
       },
-    },
     },
   },
 });
