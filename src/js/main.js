@@ -1,6 +1,14 @@
 import PhotoSwipeLightbox from './photoswipe/photoswipe-lightbox.esm.min.js';
 import PhotoSwipe from './photoswipe/photoswipe.esm.min.js';
 
+document.querySelector('.hamburger').addEventListener('click', (e) => {
+  document.body.classList.toggle('open-menu')
+})
+
+document.querySelectorAll('.mobile-nav a').forEach(mobLink => {
+  mobLink.addEventListener('click', () => document.body.classList.remove('open-menu'))
+})
+
 const lightbox = new PhotoSwipeLightbox({
   gallery: '#project-gallery',
   children: 'a',
@@ -37,5 +45,5 @@ el('close-dialog').addEventListener('click', () => {
 })
 
 document.addEventListener('keydown', (e) => {
-  if(e.code === 'Escape' && modal.classList.contains('open')) closeModal()
+  if(e.code === 'Escape' && modal.classList.contains('open') && !document.querySelector('.pswp--open')) closeModal()
 })

@@ -1,9 +1,7 @@
 :root {
-  /* --paper:#F1F2ED; */
   --paper: #f5f3ea;
   --paper-line: #D9DBD2;
   --ink: #1A2229;
-  /* --blue:#24509C; */
   --blue: #0b8f94;
   --blue-soft: #DDE6F4;
   --slate: #69746F;
@@ -12,7 +10,6 @@
   --maxw: 1120px;
   --gutter: clamp(20px, 5vw, 64px);
 }
-
 
 * {
   margin: 0;
@@ -33,9 +30,6 @@ body {
   line-height: 1.6;
   background-image: radial-gradient(circle, var(--paper-line) 1.2px, transparent 1.2px);
   background-size: 30px 30px;
-  /* &:has(dialog[open]) {
-    overflow: hidden;
-  } */
 }
 
 ::selection {
@@ -150,17 +144,13 @@ button:focus-visible {
 }
 
 /* ---------- Header / Nav ---------- */
-header.site {
+header.header {
   position: sticky;
   top: 0;
   z-index: 20;
-  /* background: rgba(241, 242, 237, 0.88); */
   background: rgba(243, 239, 224, .7);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--rule);
-}
-
-.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -169,7 +159,7 @@ header.site {
   margin: 0 auto;
 }
 
-.nav .id {
+.header .id {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -214,9 +204,86 @@ header.site {
   height: 100%;
 }
 
-.nav-toggle {
+.hamb-wrap {
   display: none;
 }
+
+%hamb-line {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  background-color: var(--ink);
+  border-radius: 2px;
+  transition: all .2s ease;
+}
+
+.hamburger {
+  display: inline-block;
+  border: none;
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  &::before, &::after {
+    content: '';
+    @extend %hamb-line;
+  }
+  &::before {
+    top: 3px;
+  }
+  &::after {
+    bottom: 4px;
+  }
+  span {
+    @extend %hamb-line;
+    top: calc(50% - 2px);
+    opacity: 1;
+  }
+}
+
+.mobile-panel {
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  background: rgba(243, 239, 224, .7);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--rule);
+  transition: all .2s ease-in;
+  transform: translateY(-130%);
+  z-index: 10;
+  ul {
+    list-style: none;
+    a {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+body.open-menu {
+  .hamburger {
+    span {
+      opacity: 0;
+    }
+    &::before {
+      rotate: 45deg;
+      top: 12px;
+    }
+    &::after {
+      rotate: -45deg;
+      bottom: 14px;
+    }
+  }
+  .mobile-panel {
+    transform: translateY(0);
+  }
+}
+
+
 
 /* ---------- Hero ---------- */
 .hero {
@@ -355,10 +422,8 @@ section {
 /* ---------- Skills ---------- */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 10px;
-  /* background:var(--rule); */
-
 }
 
 .skill-panel {
@@ -766,9 +831,8 @@ footer {
 }
 
 .modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 30px;
   gap: 20px;
   padding: 10px 10px 10px 20px;
   position: relative;
@@ -844,18 +908,18 @@ footer {
 
 .project-gallery {
   padding-top: 6px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 10px;
+
   a {
     display: inline-block;
-    flex-basis: calc(50% - 5px);
     position: relative;
     aspect-ratio: 2/1;
     overflow: hidden;
     color: var(--inc);
     border: 1px solid var(--paper-line);
+
     span {
       display: inline-block;
       width: 100%;
@@ -869,9 +933,11 @@ footer {
       transition: all .2s ease-in;
       opacity: .2;
     }
+
     &:hover span {
       opacity: 1;
     }
+
     img {
       width: 100%;
       height: 100%;
@@ -879,7 +945,7 @@ footer {
       object-position: center top;
     }
   }
-  
+
 }
 
 .modal-project-content {
@@ -943,9 +1009,7 @@ footer {
   }
 }
 
-
-
-@media (max-width:860px) {
+@media screen and (max-width:860px) {
   .hero-grid {
     grid-template-columns: 1fr;
   }
@@ -966,5 +1030,24 @@ footer {
   .nav ul {
     display: none;
   }
+  .hamb-wrap {
+    display: block;
+  }
 }
 
+@media screen and (max-width:600px) {
+  .modal.open {
+    top: 0;
+  }
+  .modal-body {
+    grid-template-columns: 1fr;
+    max-height: calc(100dvh - 82px);
+    overflow-y: auto;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .modal-project-content .tools ul {
+    column-count: 1;
+  }
+}
