@@ -151,12 +151,14 @@ header.header {
   background: rgba(243, 239, 224, .7);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--rule);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px var(--gutter);
-  max-width: var(--maxw);
-  margin: 0 auto;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px var(--gutter);
+    max-width: var(--maxw);
+    margin: 0 auto;
+  }
 }
 
 .header .id {
