@@ -16,22 +16,39 @@
   <meta name="apple-mobile-web-app-title" content="Oleksandr Kovalenko - Portfolio" />
   <link rel="manifest" href="/portfolio/favicon/site.webmanifest" />
 
-  <script type="module" crossorigin src="/portfolio/assets/index-B9EOqQp7.js"></script>
-  <link rel="stylesheet" crossorigin href="/portfolio/assets/index-Bvnez9ZN.css">
+  <script type="module" crossorigin src="/portfolio/assets/index-BM-ZgwGf.js"></script>
+  <link rel="stylesheet" crossorigin href="/portfolio/assets/index-DOIAWnBV.css">
 </head>
 <body>
-  <header class="site">
-    <div class="nav">
-      <span class="id">О. Коваленко</span>
-      <ul>
-        <li><a href="#about">Про мене</a></li>
-        <li><a href="#skills">Навички</a></li>
-        <li><a href="#experience">Досвід</a></li>
-        <li><a href="#projects">Проєкти</a></li>
-        <li><a href="#contact">Контакти</a></li>
-      </ul>
-    </div>
-  </header>
+  <header class="header">
+  <div class="logo">
+    <span class="id">О. Коваленко</span>
+  </div>
+  <nav class="nav">
+    <ul>
+      <li><a href="#about">Про мене</a></li>
+      <li><a href="#skills">Навички</a></li>
+      <li><a href="#experience">Досвід</a></li>
+      <li><a href="#projects">Проєкти</a></li>
+      <li><a href="#education">Освіта</a></li>
+    </ul>
+  </nav>
+  <div class="hamb-wrap">
+    <button type="button" class="hamburger open"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-panel">
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="#about">Про мене</a></li>
+      <li><a href="#skills">Навички</a></li>
+      <li><a href="#experience">Досвід</a></li>
+      <li><a href="#projects">Проєкти</a></li>
+      <li><a href="#education">Освіта</a></li>
+    </ul>
+  </nav>
+</div>
   <main>
     <section class="hero" style="border-top:none;">
   <div class="wrap hero-grid">
@@ -510,6 +527,81 @@
         <li>PixelPerfect</li>
         <li>Responsive Web Design</li>
         <li>Lazy Loading</li>
+      </ul>
+    </div>
+  </div>
+</template>
+      <div class="project-card panel">
+  <div class="project-overlay">
+    <a href="javascript:void(0)" class="detail-info-link" data-title="Cargo Register" data-template="tmpl-cargo">Дивитися детальну інформацію</a>
+  </div>
+  <span class="tick tl"></span><span class="tick br"></span>
+  <div class="project-img">
+    <img src="/portfolio/assets/images/projects/cargo/main-preview.png" alt="">
+  </div>
+  <div class="project-content">
+    <h3 class="project-org">Cargo Register</h3>
+    <div class="project-link">
+      <a href="https://nofagroup.com.ua/" target="_blank" rel="noopener">nofagroup.com.ua</a>
+    </div>
+    <p>Закрита система обліку соняшникової та рапсової олії, ведення звітності, розрахунки аналізів.</p>
+    <div class="stack-tags"><span>SPA</span><span>Аналітика</span><span>REST API</span></div>
+  </div>
+</div>
+
+<template id="tmpl-cargo">
+  <div class="project-gallery-wrap">
+    <div class="project-gallery" id="project-gallery">
+      <a href="/portfolio/assets/images/projects/cargo/main.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="805">
+        <img src="/portfolio/assets/images/projects/cargo/main-thumb.png" alt="Головна">
+        <span>Головна</span>
+      </a>
+      <a href="/portfolio/assets/images/projects/cargo/dashboard.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="1410">
+        <img src="/portfolio/assets/images/projects/cargo/dashboard-thumb.png" alt="Dashboard">
+        <span>Dashboard</span>
+      </a>
+      <a href="/portfolio/assets/images/projects/cargo/analizes.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="1490">
+        <img src="/portfolio/assets/images/projects/cargo/analizes-thumb.png" alt="Таблиця">
+        <span>Таблиця</span>
+      </a>
+      <a href="/portfolio/assets/images/projects/cargo/oil_analiz.png" target="_blank"
+        data-pswp-width="1600"
+        data-pswp-height="802">
+        <img src="/portfolio/assets/images/projects/cargo/oil_analiz-thumb.png" alt="Аналіз">
+        <span>Аналіз</span>
+      </a>
+    </div>
+  </div>
+  <div class="modal-project-content">
+    <div class="address">
+      <a href="https://nofagroup.com.ua/" target="_blank" rel="noopener">nofagroup.com.ua</a>
+    </div>
+    <div class="description">
+      <p>Закрита система обліку соняшникової та рапсової олії, ведення звітності, розрахунки аналізів.</p>
+      <p>Повний цикл розробки: від аналізу вимог, планування та створення структури бази даних до повністю готового продукту.</p>
+      <p>Генерація звітів та інших документів для друку та експорту у форматі Excel "на льоту".</p>
+      <p>Інтерфейс реалізований в якості SPA з використанням AJAX без додаткових бібліотек.</p>
+    </div>
+    <div class="tools">
+      <h4>Інструменти та технології</h4>
+      <ul>
+        <li>Dashboard</li>
+        <li>SPA</li>
+        <li>PHP (OOP)</li>
+        <li>PDO</li>
+        <li>MySQL</li>
+        <li>HTML5 semantic / SCSS</li>
+        <li>JavaScript ES6+</li>
+        <li>DataTables</li>
+        <li>REST API</li>        
+        <li>Responsive Web Design</li>
+        <li>Багатомовність</li>
       </ul>
     </div>
   </div>
@@ -1058,7 +1150,7 @@
     </div>
   </div>
 </section>
-    <section id="credentials">
+    <section id="education">
   <div class="wrap">
     <div class="section-head">
       <h2>Сертифікати та освіта</h2>
@@ -1070,15 +1162,28 @@
           Сертифікації</h3>
         <div class="cred-list">
           <div class="cred-item">
-            <div class="name"><a href="https://glx.globallogic.com/certify/b4ce985e-e1f1-438a-8016-81412b78e395"
-                target="_blank" rel="noopener">AI 101: GL Certified AI Associate — Developers ↗</a></div>
-            <div class="meta">GlobalLogic · 06/2026</div>
+            <div class="cert-pic">
+              <a href="/portfolio/assets/images/certs/ai101-cert.png" target="_blank" data-pswp-width="1200"
+                data-pswp-height="674">
+                <img src="/portfolio/assets/images/certs/ai101-cert-thumb.png" alt="AI 101">
+              </a>
+            </div>
+            <div class="cert-data">
+              <div class="name">AI 101: GL Certified AI Associate — Developers</div>
+              <div class="meta">GlobalLogic · 06/2026</div>
+            </div>
           </div>
           <div class="cred-item">
-            <div class="name"><a
-                href="https://www.freecodecamp.org/certification/fcc1a9e3233-8ed3-45f6-bb22-d9f5b3f0d744/front-end-development-libraries"
-                target="_blank" rel="noopener">Frontend Development Libraries ↗</a></div>
-            <div class="meta">freeCodeCamp · 02/2022</div>
+            <div class="cert-pic">
+              <a href="/portfolio/assets/images/certs/freeCodeCamp-cert.png" target="_blank" data-pswp-width="1200"
+                data-pswp-height="811">
+                <img src="/portfolio/assets/images/certs/freeCodeCamp-cert-thumb.png" alt="FreeCodeCamp">
+              </a>
+            </div>
+            <div class="cert-data">
+              <div class="name">Frontend Development Libraries</div>
+              <div class="meta">freeCodeCamp · 02/2022</div>
+            </div>
           </div>
         </div>
       </div>
@@ -1087,10 +1192,10 @@
           style="font-size:0.95rem;color:var(--slate);margin-bottom:16px;font-family:'IBM Plex Mono',monospace;font-weight:400;">
           Освіта</h3>
         <div class="cred-list">
-          <div class="cred-item">
+          <div class="cred-item full">
             <div class="name">Національний Університет Кораблебудування імені адм. Макарова</div>
-            <div class="meta">Диплом інженера, Програмне забезпечення автоматизованих систем · 09/2004 — 02/2010
-            </div>
+            <div class="meta">Кафедра Інформаційних Технологій</div>
+            <div class="meta">Програмне забезпечення автоматизованих систем · 09/2004 — 02/2010</div>
           </div>
         </div>
       </div>
