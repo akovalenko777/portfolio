@@ -15,6 +15,12 @@ const lightbox = new PhotoSwipeLightbox({
   pswpModule: () => PhotoSwipe
 });
 
+const lightboxCert = new PhotoSwipeLightbox({
+  gallery: '.cred-list',
+  children: 'a',
+  pswpModule: () => PhotoSwipe
+});
+lightboxCert.init();
 
 const el = (id) => document.getElementById(id)
 

@@ -722,6 +722,16 @@ section {
 .cred-item {
   border-bottom: 1px solid var(--rule);
   padding-bottom: 14px;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 20px;
+  &.full {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cert-pic img {
+  width: 100%;
 }
 
 .cred-item .name {
