@@ -27,6 +27,9 @@ function getHtmlEntries(dir, entries = {}) {
   return entries;
 }
 
+let resolvedBase = '/';
+let isBuild = false;
+
 export default defineConfig({
   base: '/portfolio/',
   plugins: [
@@ -42,12 +45,17 @@ export default defineConfig({
     }),
     {
       name: 'replace-html-image-links',
+      configResolved(config) {
+        resolvedBase = config.base
+        isBuild = config.command === 'build'
+      },
       transformIndexHtml: {
         order: 'post',
         handler(html) {
+          if (!isBuild) return html
           return html.replace(
             /<a href=".\/src\//g, 
-              '<a href="/portfolio/'
+              '<a href="'+resolvedBase
           );
         }
       }
