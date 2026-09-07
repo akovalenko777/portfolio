@@ -29,9 +29,8 @@ const backdrop = el('dialog-backdrop')
 document.addEventListener('click', (e) => {
   if(e.target.classList.contains('detail-info-link')){
     el('dialog-project-title').innerText = e.target.dataset.title
-    const template = el(e.target.dataset.template)
-    const clone = document.importNode(template.content, true)
-    el('project-modal-content').appendChild(clone)
+    const content = el(e.target.dataset.template)
+    el('project-modal-content').innerHTML = content.innerHTML
     lightbox.init();
     modal.classList.add('open')
     modal.setAttribute('aria-modal', 'true')
