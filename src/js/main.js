@@ -52,3 +52,8 @@ el('close-dialog').addEventListener('click', () => {
 document.addEventListener('keydown', (e) => {
   if(e.code === 'Escape' && modal.classList.contains('open') && !document.querySelector('.pswp--open')) closeModal()
 })
+
+el('show-all-projects').addEventListener('click', (e) => {
+  e.target.parentElement.remove()
+  el('all-projects').classList.add('show')
+})

@@ -18,6 +18,7 @@
     --ink: #f5f3ea;
     --blue: #14b879;
     --blue-soft: #2d3035;
+    --rule: rgba(245, 243, 234, 0.14);
   }
 }
 
@@ -161,6 +162,7 @@ header.header {
   background: rgba(#f5f3ea, .7);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--rule);
+  transition: all .2s ease-in;
   @media (prefers-color-scheme: dark) {
     background: rgba(#0f0f0f, .7);
   }
@@ -350,20 +352,21 @@ h1.name {
 }
 
 .contact-row a,
-.project-overlay a {
+.project-overlay a,
+.btn {
   border: 1px solid var(--rule);
   padding: 9px 16px;
   color: var(--ink);
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.82rem;
-}
-
-.contact-row a:hover,
-.project-overlay a:hover {
-  border-color: var(--blue);
-  color: var(--blue);
-  text-decoration: none;
-  background: var(--blue-soft);
+  cursor: pointer;
+  background-color: transparent;
+  &:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+    text-decoration: none;
+    background: var(--blue-soft);
+  }
 }
 
 .photo-frame {
@@ -614,6 +617,26 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
+}
+
+.projects-more-wrap {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#all-projects {
+  margin-top: 20px;
+  scale: 0;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: all .2s ease;
+  &.show {
+    scale: 1;
+    opacity: 1;
+    height: auto;
+    visibility: visible;
+  }
 }
 
 .project-card {
