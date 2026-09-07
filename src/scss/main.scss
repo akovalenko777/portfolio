@@ -176,6 +176,13 @@ header.header {
   }
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
 .header .id {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
