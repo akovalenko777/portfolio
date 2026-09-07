@@ -2,28 +2,41 @@ import fs from 'fs-extra';
 import path from 'path';
 import sharp from 'sharp';
 
-const IMG_DIR = path.resolve('src/assets/images');
+// const IMG_DIR = path.resolve('src/assets/images');
+const IMG_DIR = path.resolve('public/assets/images');
 
-async function convertImages() {
-  if (!(await fs.pathExists(IMG_DIR))) return;
+async function processDirectory(dir) {
+  const entries = await fs.readdir(dir, { withFileTypes: true });
 
-  const files = await fs.readdir(IMG_DIR);
-  // Look for source images, but skip files that are already webp
-  const images = files.filter(file => /\.(png|jpe?g)$/i.test(file));
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
 
-  for (const file of images) {
-    const ext = path.extname(file);
-    const baseName = path.basename(file, ext);
-    const destPath = path.join(IMG_DIR, `${baseName}.webp`);
+    if (entry.isDirectory()) {
+      await processDirectory(fullPath);
+      continue;
+    }
+
+    if (!/\.(png|jpe?g)$/i.test(entry.name)) continue;
+
+    const ext = path.extname(entry.name);
+    const baseName = path.basename(entry.name, ext);
+    const destPath = path.join(dir, `${baseName}.webp`);
 
     // Skip if the webp version already exists to keep it fast
     if (await fs.pathExists(destPath)) continue;
 
-    console.log(`📸 Converting image: ${file} ➔ ${baseName}.webp`);
-    await sharp(path.join(IMG_DIR, file))
+    const relPath = path.relative(IMG_DIR, fullPath);
+    console.log(`📸 Converting image: ${relPath} ➔ ${path.relative(IMG_DIR, destPath)}`);
+
+    await sharp(fullPath)
       .webp({ quality: 80 })
       .toFile(destPath);
   }
+}
+
+async function convertImages() {
+  if (!(await fs.pathExists(IMG_DIR))) return;
+  await processDirectory(IMG_DIR);
 }
 
 convertImages();
