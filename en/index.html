@@ -62,8 +62,8 @@
 }
 </script>
 
-  <script type="module" crossorigin src="/portfolio/assets/main-Bb9NI1j6.js"></script>
-  <link rel="stylesheet" crossorigin href="/portfolio/assets/main-B9a20KTz.css">
+  <script type="module" crossorigin src="/portfolio/assets/main-B6_6o1jS.js"></script>
+  <link rel="stylesheet" crossorigin href="/portfolio/assets/main-CBhOzX4R.css">
 </head>
 <body>
   <header class="header">
@@ -112,8 +112,8 @@
       <p class="tagline">I design and build fast, user-friendly interfaces — from bespoke CMSs in PHP/MySQL to modern systems built with React and Vue 3. I have a strong grounding in architecture, REST APIs and data handling.</p>
       <div class="contact-row">
         <a href="mailto:akovalenko777@gmail.com">akovalenko777@gmail.com</a>
-        <a href="https://www.linkedin.com/in/oleksandr-kovalenko-a2053b5a/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a href="https://t.me/OKovalenko777" target="_blank" rel="noopener">Telegram ↗</a>
+        <a href="https://www.linkedin.com/in/oleksandr-kovalenko-a2053b5a/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://t.me/OKovalenko777" target="_blank" rel="noopener">Telegram</a>
         <a href="/assets/files/Oleksandr_Kovalenko_CV_en.pdf" download>Download CV</a>
       </div>
     </div>
@@ -152,8 +152,11 @@
     </div>
     <div class="skills-grid">
       <div class="skill-panel core-skills">
-        <h3>Core</h3>
-        <ul>
+        <div class="skill-header">
+          <h3>Core</h3>
+        </div>
+        
+        <ul class="skills-list">
           <li>HTML5 (semantic)</li>
           <li>CSS3 (SCSS, LESS)</li>
           <li>RWD, mobile-first, pixel-perfect</li>
@@ -162,8 +165,11 @@
         </ul>
       </div>
       <div class="skill-panel react-skills">
-        <h3>React ecosystem</h3>
-        <ul>
+        <div class="skill-header">
+          <h3>React ecosystem</h3>
+        </div>
+        
+        <ul class="skills-list">
           <li>React Router</li>
           <li>Next.js</li>
           <li>TanStack Query / Router / Table</li>
@@ -172,8 +178,11 @@
         </ul>
       </div>
       <div class="skill-panel vue-skills">
-        <h3>Vue ecosystem</h3>
-        <ul>
+        <div class="skill-header">
+          <h3>Vue ecosystem</h3>
+        </div>
+
+        <ul class="skills-list">
           <li>Vue 3 (Composition API)</li>
           <li>Nuxt 2</li>
           <li>Vue Router</li>
@@ -182,8 +191,11 @@
         </ul>
       </div>
       <div class="skill-panel tools-skills">
-        <h3>APIs &amp; Tools</h3>
-        <ul>
+        <div class="skill-header">
+          <h3>APIs &amp; Tools</h3>
+        </div>
+
+        <ul class="skills-list">
           <li>REST, OpenAPI/Swagger</li>
           <li>Axios / Fetch / Ky / XHR</li>
           <li>Vite / Gulp</li>
@@ -192,8 +204,11 @@
         </ul>
       </div>
       <div class="skill-panel cms-skills">
-        <h3>Backend &amp; CMS</h3>
-        <ul>
+        <div class="skill-header">
+          <h3>Backend &amp; CMS</h3>
+        </div>
+        
+        <ul class="skills-list">
           <li>MySQL / NoSQL / PostgreSQL</li>
           <li>PHP</li>
           <li>Smarty / Django / Lua</li>
@@ -202,8 +217,11 @@
         </ul>
       </div>
       <div class="skill-panel other-skills">
-        <h3>Інші навички</h3>
-        <ul>
+        <div class="skill-header">
+          <h3>Other skills</h3>
+        </div>
+        
+        <ul class="skills-list">
           <li>Node.JS</li>
           <li>TypeScript</li>
           <li>Figma</li>
@@ -214,6 +232,8 @@
     </div>
   </div>
 </section>
+
+<script src="/src/js/3d-card.js"></script>
     <section id="experience">
   <div class="wrap">
     <div class="section-head">
@@ -294,7 +314,7 @@
     <div class="projects-grid">
       <div class="project-card panel">
   <div class="project-overlay">
-    <a href="javascript:void(0)" class="detail-info-link" data-title="The Map of Recovery" data-template="tmpl-reukraine">Show detailed information</a>
+    <button type="button" class="detail-info-link btn" data-title="The Map of Recovery" data-template="tmpl-reukraine">Show detailed information</button>
     <a href="https://reukraine.shtab.net/" target="_blank" rel="noopener">Go to the site ↗</a>
   </div>
   <span class="tick tl"></span><span class="tick br"></span>
@@ -375,7 +395,7 @@
 </div>
       <div class="project-card panel">
   <div class="project-overlay">
-    <a href="javascript:void(0)" class="detail-info-link" data-title="Recovery Roadmap for Regions" data-template="tmpl-rebuild">Show detailed information</a>
+    <button type="button" class="detail-info-link btn" data-title="Recovery Roadmap for Regions" data-template="tmpl-rebuild">Show detailed information</button>
     <a href="https://rebuild.shtab.net/" target="_blank" rel="noopener">Go to the site ↗</a>
   </div>
   <span class="tick tl"></span><span class="tick br"></span>
@@ -452,7 +472,7 @@
 </div>
       <div class="project-card panel">
   <div class="project-overlay">
-    <a href="javascript:void(0)" class="detail-info-link" data-title="Russian War Criminals" data-template="tmpl-rwc">Show detailed information</a>
+    <button type="button" class="detail-info-link btn" data-title="Russian War Criminals" data-template="tmpl-rwc">Show detailed information</button>
     <a href="https://rwc.shtab.net/" target="_blank" rel="noopener">Go to the site ↗</a>
   </div>
   <span class="tick tl"></span><span class="tick br"></span>
@@ -541,7 +561,7 @@
 </div>
       <div class="project-card panel">
   <div class="project-overlay">
-    <a href="javascript:void(0)" class="detail-info-link" data-title="The Anti-Corruption Headquarters" data-template="tmpl-shtab">Show detailed information</a>
+    <button type="button" class="detail-info-link btn" data-title="The Anti-Corruption Headquarters" data-template="tmpl-shtab">Show detailed information</button>
     <a href="https://shtab.net/" target="_blank" rel="noopener">Go to the site ↗</a>
   </div>
   <span class="tick tl"></span><span class="tick br"></span>
@@ -630,7 +650,7 @@
 </div>
       <div class="project-card panel">
   <div class="project-overlay">
-    <a href="javascript:void(0)" class="detail-info-link" data-title="Cargo Register" data-template="tmpl-cargo">Show detailed information</a>
+    <button type="button" class="detail-info-link btn" data-title="Cargo Register" data-template="tmpl-cargo">Show detailed information</button>
   </div>
   <span class="tick tl"></span><span class="tick br"></span>
   <div class="project-img">
@@ -720,7 +740,7 @@
 </div>
       <div class="project-card panel">
   <div class="project-overlay">
-    <a href="javascript:void(0)" class="detail-info-link" data-title="NGO Public Movement 'Social Unity'" data-template="tmpl-seorgua">Show detailed information</a>
+    <button type="button" class="detail-info-link btn" data-title="NGO Public Movement 'Social Unity'" data-template="tmpl-seorgua">Show detailed information</button>
     <a href="https://se.org.ua/" target="_blank" rel="noopener">Go to the site ↗</a>
   </div>
   <span class="tick tl"></span><span class="tick br"></span>
@@ -814,7 +834,7 @@
     <div class="projects-grid" id="all-projects">
       <div class="project-card panel">
   <div class="project-overlay">
-    <a href="javascript:void(0)" class="detail-info-link" data-title="Technology for people" data-template="tmpl-tdl">Show detailed information</a>
+    <button type="button" class="detail-info-link btn" data-title="Technology for people" data-template="tmpl-tdl">Show detailed information</button>
     <a href="https://tdl.com.ua/" target="_blank" rel="noopener">Go to the site ↗</a>
   </div>
   <span class="tick tl"></span><span class="tick br"></span>
@@ -904,7 +924,7 @@
 </div>
       <div class="project-card panel">
   <div class="project-overlay">
-    <a href="javascript:void(0)" class="detail-info-link" data-title="Social Enterprise Centre" data-template="tmpl-socbusiness">Show detailed information</a>
+    <button type="button" class="detail-info-link btn" data-title="Social Enterprise Centre" data-template="tmpl-socbusiness">Show detailed information</button>
     <a href="https://soc.business/" target="_blank" rel="noopener">Go to the site ↗</a>
   </div>
   <span class="tick tl"></span><span class="tick br"></span>
@@ -993,7 +1013,7 @@
 </div>
       <div class="project-card panel">
   <div class="project-overlay">
-    <a href="javascript:void(0)" class="detail-info-link" data-title="Enfys Babyshop" data-template="tmpl-enfys">Show detailed information</a>
+    <button type="button" class="detail-info-link btn" data-title="Enfys Babyshop" data-template="tmpl-enfys">Show detailed information</button>
     <a href="https://enfys.com.ua/" target="_blank" rel="noopener">Go to the site ↗</a>
   </div>
   <span class="tick tl"></span><span class="tick br"></span>
@@ -1094,7 +1114,7 @@
 </div>
       <div class="project-card panel">
   <div class="project-overlay">
-    <a href="javascript:void(0)" class="detail-info-link" data-title="PARETTO" data-template="tmpl-paretto">Show detailed information</a>
+    <button type="button" class="detail-info-link btn" data-title="PARETTO" data-template="tmpl-paretto">Show detailed information</button>
     <a href="https://paretto.com.ua/" target="_blank" rel="noopener">Go to the site ↗</a>
   </div>
   <span class="tick tl"></span><span class="tick br"></span>
@@ -1192,7 +1212,7 @@
 </div>
       <div class="project-card panel">
   <div class="project-overlay">
-    <a href="javascript:void(0)" class="detail-info-link" data-title="Egmont Aviation" data-template="tmpl-egmont">Show detailed information</a>
+    <button type="button" class="detail-info-link btn" data-title="Egmont Aviation" data-template="tmpl-egmont">Show detailed information</button>
     <a href="https://egmontaviation.com/" target="_blank" rel="noopener">Go to the site ↗</a>
   </div>
   <span class="tick tl"></span><span class="tick br"></span>
@@ -1273,7 +1293,7 @@
 </div>
       <div class="project-card panel">
   <div class="project-overlay">
-    <a href="javascript:void(0)" class="detail-info-link" data-title="Amsaan, ОАЕ" data-template="tmpl-amsaan">Show detailed information</a>
+    <button type="button" class="detail-info-link btn" data-title="Amsaan, ОАЕ" data-template="tmpl-amsaan">Show detailed information</button>
     <a href="https://amsaan.com/" target="_blank" rel="noopener">Go to the site ↗</a>
   </div>
   <span class="tick tl"></span><span class="tick br"></span>
@@ -1368,9 +1388,21 @@
     <section id="education">
   <div class="wrap">
     <div class="section-head">
-      <h2>Certificates &amp; Education</h2>
+      <h2>Education &amp; Certificates</h2>
     </div>
     <div class="cred-grid">
+      <div>
+        <h3
+          style="font-size:0.95rem;color:var(--slate);margin-bottom:16px;font-family:'IBM Plex Mono',monospace;font-weight:400;">
+          Education</h3>
+        <div class="cred-list">
+          <div class="cred-item full">
+            <div class="name">Admiral Makarov National University of Shipbuilding</div>
+            <div class="meta">Information Technologies</div>
+            <div class="meta">Software for Automated Systems · 09/2004 — 02/2010</div>
+          </div>
+        </div>
+      </div>
       <div>
         <h3
           style="font-size:0.95rem;color:var(--slate);margin-bottom:16px;font-family:'IBM Plex Mono',monospace;font-weight:400;">
@@ -1408,18 +1440,6 @@
           </div>
         </div>
       </div>
-      <div>
-        <h3
-          style="font-size:0.95rem;color:var(--slate);margin-bottom:16px;font-family:'IBM Plex Mono',monospace;font-weight:400;">
-          Education</h3>
-        <div class="cred-list">
-          <div class="cred-item full">
-            <div class="name">Admiral Makarov National University of Shipbuilding</div>
-            <div class="meta">Information Technologies</div>
-            <div class="meta">Software for Automated Systems · 09/2004 — 02/2010</div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -1441,7 +1461,7 @@
 </footer>
 
   <div id="dialog-backdrop"></div>
-<div id="project-dialog" class="modal" aria-modal="false">
+<div id="project-dialog" class="modal" tabindex="-1" role="dialog" aria-modal="true" aria-hidden="true">
   <div class="modal-header">
     <h3>Detail project info: <span id="dialog-project-title"></span></h3>
     <button id="close-dialog">Close</button>
