@@ -26,23 +26,30 @@ const el = (id) => document.getElementById(id)
 
 const modal = el('project-dialog')
 const backdrop = el('dialog-backdrop')
+let prevFocusableEl = null
 document.addEventListener('click', (e) => {
   if(e.target.classList.contains('detail-info-link')){
+    prevFocusableEl = e.target
     el('dialog-project-title').innerText = e.target.dataset.title
     const content = el(e.target.dataset.template)
     el('project-modal-content').innerHTML = content.innerHTML
     lightbox.init();
     modal.classList.add('open')
-    modal.setAttribute('aria-modal', 'true')
+    modal.removeAttribute('tabindex')
+    modal.setAttribute('aria-hidden', 'false')
     backdrop.classList.add('show')
+    setTimeout(() => {document.getElementById('close-dialog').focus({focusVisible: true})}, 300)
   }
 })
 
 const closeModal = () => {
   modal.classList.remove('open')
-  modal.setAttribute('aria-modal', 'false')
+  modal.setAttribute('tabindex', '-1')
+  modal.setAttribute('aria-hidden', 'true')
   backdrop.classList.remove('show')
   el('project-modal-content').innerHTML = ''
+  prevFocusableEl.focus({focusVisible: true})
+  prevFocusableEl = null
 }
 
 el('close-dialog').addEventListener('click', () => {
